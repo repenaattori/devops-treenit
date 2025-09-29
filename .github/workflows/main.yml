@@ -7,12 +7,10 @@ jobs:
     steps:
       - name: Checkout git code
         uses: actions/checkout@v5
-        with: 
-          ref: ${{github.ref}}
-            
-      - uses: actions/setup-node@v5
       - name: Build the app
         run: | 
-          npm i
-          npm run build
-          ls dist
+           touch info.txt
+           git add info.txt
+           git commit -m  'Info added'
+           git push
+           
