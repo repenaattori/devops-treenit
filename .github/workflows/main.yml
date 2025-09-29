@@ -1,5 +1,5 @@
 name: Training
-on: [workflow_dispatch]
+on: [push]
 
 jobs:
   test-job:
@@ -8,4 +8,4 @@ jobs:
       - name: Checkout git code
         uses: actions/checkout@v5
       - name: Checkt file listing
-        run: ls -a
+        run: cat README.md
