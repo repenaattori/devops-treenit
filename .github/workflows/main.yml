@@ -10,6 +10,8 @@ jobs:
       - name: Build the app
         run: | 
            touch info.txt
+           git config user.name 'repenaattori'
+           git config user.email 'reimarii@oamk.fi'
            git add info.txt
            git commit -m  'Info added'
            git push
