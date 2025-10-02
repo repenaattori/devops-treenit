@@ -1,0 +1,11 @@
+name: Testing
+on: [workflow_dispatch]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout git code
+        run: | 
+          sudo apt-get install btop
+          btop
