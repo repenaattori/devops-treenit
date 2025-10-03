@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Do some
-        if:  ${{env.PW == 'qwerty12'}}
+        if:  ${{secrets.DB_PW == 'qwerty12'}}
         run: echo 'Hello'
            
