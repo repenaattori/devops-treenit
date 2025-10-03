@@ -4,11 +4,15 @@ on: [workflow_dispatch]
 permissions: 
   contents: write
 
+env:
+  PW: ${{secrets.DB_PW}}
+  
+
 jobs:
   test-job:
-    if:  ${{secrets.DB_PW == 'qwerty123'}}
     runs-on: ubuntu-latest
     steps:
       - name: Do some
+        if:  ${{env.PW == 'qwerty123'}}
         run: echo 'Hello'
            
