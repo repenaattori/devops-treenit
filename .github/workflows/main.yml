@@ -11,5 +11,5 @@ jobs:
       - name: Checkout git code
         uses: actions/checkout@v5
       - name: Build the app
-        run: echo ${{vars.UNAME}}
+        run: echo ${{secrets.DB_PW}}
            
