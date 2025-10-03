@@ -6,10 +6,9 @@ permissions:
 
 jobs:
   test-job:
+    if: ${{secrets.DB_PW}} == 'qwerty123'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout git code
-        uses: actions/checkout@v5
-      - name: Build the app
-        run: echo ${{secrets.DB_PW}}
+      - name: Do some
+        run: echo 'Hello'
            
