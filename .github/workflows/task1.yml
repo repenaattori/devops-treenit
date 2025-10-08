@@ -1,0 +1,8 @@
+name: Task 1
+on: [workflow_call]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Task 1 running"
