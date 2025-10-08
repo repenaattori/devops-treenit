@@ -1,0 +1,9 @@
+name: Composite task
+on: [workflow_dispatch]
+
+jobs:
+  task-1:
+    uses: './.github/workflows/task1.yml'
+  task-2:
+    uses: './.github/workflows/task2.yml'
+    needs: task-1
